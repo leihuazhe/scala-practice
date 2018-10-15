@@ -1,8 +1,7 @@
-package com.maple.scala.actor
+package com.maple.akka.hello.actorone
 
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, PoisonPill, Props, Terminated}
 import akka.event.Logging
-import com.maple.akka.actor.Pinger
 
 /**
   * Defining an Actor class

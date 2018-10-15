@@ -1,4 +1,4 @@
-package com.maple.akka.actor
+package com.maple.akka.hello.actorone
 
 import akka.actor.{Actor, ActorRef, ActorSystem, PoisonPill, Props}
 import language.postfixOps
