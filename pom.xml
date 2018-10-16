@@ -8,7 +8,6 @@
     <artifactId>scala-practice</artifactId>
     <version>1.0</version>
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -37,7 +36,6 @@
         </dependency>
 
 
-
         <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
         <dependency>
             <groupId>org.scalatest</groupId>
@@ -45,6 +43,18 @@
             <version>3.0.0</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.github.wangzaixiang</groupId>
+            <artifactId>scala-sql_2.12</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.today</groupId>
+            <artifactId>service-commons_2.12</artifactId>
+            <version>1.4-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 
