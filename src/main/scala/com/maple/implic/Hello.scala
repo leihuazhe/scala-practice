@@ -44,6 +44,13 @@ object Implicits {
 
   }
 
+  implicit class OrderedExt2[T](v: T)(implicit ordering: Ordering[T]) {
+
+    def between2(min: T, max: T) = {
+      ordering.lteq(min, v) && ordering.lteq(v, max)
+    }
+  }
+
   /**
     * 10 between (10,20)
     *
