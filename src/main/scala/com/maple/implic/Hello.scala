@@ -50,14 +50,14 @@ object Implicits {
     * def implicitly[T](implicit e: T) = e
     */
 
-  implicit class SortedExt[T](v: T) {
+  implicit class SortedExt[T: Ordering](v: T) {
 
-    def between1(begin: Int, end: Int) = {
-
-
+    def between1(begin: T, end: T)(implicit order: T ⇒ Ordering[T]) = {
+      begin.lteq(begin, v) && end.lteq(v, end)
     }
 
   }
+
 
   /*implicit class SQLStringContext(sc: StringContext) {
     def sql(args: String) = sc.parts.mkString("sql")
