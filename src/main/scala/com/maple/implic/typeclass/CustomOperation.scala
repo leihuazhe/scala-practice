@@ -29,4 +29,23 @@ object CustomOperation {
   }
 
 
+  implicit class CustomImplicitClass[T: CustomOperation](v: T) {
+
+    def multiply(x: T, y: T): String = {
+      val custom = implicitly[CustomOperation[T]]
+      custom.multiply(v, x) + "+" + custom.multiply(v, y).toString
+    }
+
+    /* def multiply(x: T, y: T)(implicit custom: CustomOperation[T]): String = {
+      custom.multiply(v, x) + custom.multiply(v, y).toString
+    }*/
+
+    def plus(x: T, y: T): String = {
+      val custom = implicitly[CustomOperation[T]]
+      custom.plus(v, x) + custom.plus(v, y).toString
+      //      custom.plus(x, y)
+    }
+  }
+
+
 }
