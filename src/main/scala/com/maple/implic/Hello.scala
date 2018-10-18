@@ -2,7 +2,6 @@ package com.maple.implic
 
 import java.sql.Timestamp
 
-import akka.japi
 
 /**
   * Created by wangzx on 2016/11/29.
@@ -171,6 +170,13 @@ object TestImplicit {
 
     println(time)
     println(time1)
+
+    val bool1 = 10.between(2, 20)
+
+    val bool2 = 30.between2(2, 20)
+
+    println(bool1)
+    println(bool2)
 
   }
 }
